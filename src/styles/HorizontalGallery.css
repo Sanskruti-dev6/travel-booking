@@ -1,0 +1,374 @@
+/* ================================
+   HORIZONTAL GALLERY
+================================ */
+
+.gallery-section {
+    position: relative;
+    background: #060b15;
+    color: white;
+    padding: 90px 6%;
+    overflow: hidden;
+}
+
+/* Background text */
+
+.gallery-bg-text {
+    position: absolute;
+    top: 100px;
+    left: 5%;
+    font-size: 180px;
+    font-weight: 700;
+    letter-spacing: 20px;
+    color: rgba(255, 255, 255, 0.02);
+    pointer-events: none;
+}
+
+/* ================================
+   HEADING
+================================ */
+
+.gallery-heading {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 55px;
+}
+
+.heading-small {
+    color: #c8a96a;
+    font-size: 12px;
+    letter-spacing: 5px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.gallery-heading h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 72px;
+    font-weight: 500;
+    line-height: 1;
+    margin: 0;
+}
+
+.gallery-heading h2 span {
+    color: #c8a96a;
+    font-style: italic;
+}
+
+.gallery-heading p {
+    color: #aeb4bf;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+/* ================================
+   HORIZONTAL GALLERY
+================================ */
+.gallery-track {
+    display: flex;
+    gap: 24px;
+
+    width: 100%;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    cursor: grab;
+
+    user-select: none;
+    -webkit-user-select: none;
+
+    touch-action: pan-x;
+
+    scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+.gallery-track::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-track.is-dragging {
+    cursor: grabbing;
+}
+
+.gallery-card {
+    flex: 0 0 340px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.gallery-card img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    pointer-events: none;
+
+    user-select: none;
+
+    -webkit-user-drag: none;
+}
+
+
+/* ================================
+   DARK GRADIENT
+================================ */
+
+.card-gradient {
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(to top,
+            rgba(3, 7, 15, 0.95) 0%,
+            rgba(3, 7, 15, 0.45) 45%,
+            rgba(3, 7, 15, 0.05) 100%);
+
+    pointer-events: none;
+}
+
+/* ================================
+   NUMBER
+================================ */
+
+.card-number {
+    position: absolute;
+
+    top: 22px;
+    right: 22px;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    color: white;
+
+    z-index: 2;
+}
+
+/* ================================
+   CARD CONTENT
+================================ */
+
+.gallery-overlay {
+    position: absolute;
+
+    left: 28px;
+    right: 28px;
+    bottom: 28px;
+
+    z-index: 3;
+}
+
+.gallery-subtitle {
+    display: block;
+
+    color: #c8a96a;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+}
+
+.gallery-overlay h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 38px;
+
+    font-weight: 500;
+
+    margin: 0 0 22px;
+}
+
+/* ================================
+   EXPLORE BUTTON
+================================ */
+
+.explore-button {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    background: white;
+
+    color: #111;
+
+    border: none;
+
+    padding: 14px 24px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.explore-button span {
+    font-size: 18px;
+}
+
+.explore-button:hover {
+    background: #c8a96a;
+
+    color: white;
+
+    transform: translateX(4px);
+}
+
+/* ================================
+   SCROLL INDICATOR
+================================ */
+
+.gallery-scroll {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-top: 35px;
+
+    color: #9ca3af;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+}
+
+.scroll-line {
+    width: 180px;
+
+    height: 2px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    overflow: hidden;
+}
+
+.scroll-line div {
+    width: 50%;
+
+    height: 100%;
+
+    background: #c8a96a;
+
+    animation: scrollMove 2s infinite ease-in-out;
+}
+
+@keyframes scrollMove {
+
+    0% {
+        transform: translateX(-100%);
+    }
+
+    50% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(200%);
+    }
+
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+    .gallery-section {
+        padding: 70px 30px;
+    }
+
+    .gallery-heading h2 {
+        font-size: 58px;
+    }
+
+    .gallery-card {
+        flex: 0 0 300px;
+        height: 410px;
+    }
+
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+    .gallery-section {
+        padding: 60px 20px;
+    }
+
+    .gallery-bg-text {
+        display: none;
+    }
+
+    .gallery-heading h2 {
+        font-size: 48px;
+    }
+
+    .gallery-heading p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .gallery-track {
+        gap: 16px;
+    }
+
+    .gallery-card {
+        flex: 0 0 82vw;
+        height: 480px;
+        border-radius: 20px;
+    }
+
+    .gallery-overlay {
+        left: 22px;
+        right: 22px;
+        bottom: 22px;
+    }
+
+    .gallery-overlay h3 {
+        font-size: 34px;
+    }
+
+    .gallery-scroll {
+        justify-content: center;
+    }
+
+}
+@media (max-width: 600px) {
+
+    .gallery-track {
+        gap: 16px;
+    }
+
+    .gallery-card {
+        flex: 0 0 82vw;
+    }
+}

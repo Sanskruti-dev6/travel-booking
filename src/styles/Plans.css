@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap");
+
+.plans-page {
+    min-height: 100vh;
+    background: #f4eee6;
+    color: #211915;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.plans-hero {
+    text-align: center;
+    padding: 100px 20px 70px;
+}
+
+.plans-label {
+    display: block;
+    margin-bottom: 18px;
+    color: #bd7548;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+.plans-hero h1 {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(58px, 7vw, 100px);
+    line-height: .9;
+    font-weight: 600;
+}
+
+.plans-hero h1 em {
+    color: #bd7548;
+    font-style: italic;
+}
+
+.plans-hero p {
+    max-width: 570px;
+    margin: 25px auto 0;
+    color: #756b64;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* ================================
+   PLANS
+================================ */
+
+.plans-section {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 30px 100px;
+}
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+
+/* ================================
+   CARD
+================================ */
+
+.plan-card {
+    position: relative;
+    padding: 32px;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+
+    background: #ffffff;
+    border: 1px solid #eaded2;
+    border-radius: 18px;
+
+    box-shadow: 0 15px 40px rgba(50, 35, 25, .07);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.plan-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 55px rgba(50, 35, 25, .12);
+}
+
+
+/* POPULAR */
+
+.plan-card.popular {
+    border: 2px solid #e3a66a;
+}
+
+.popular-badge {
+    position: absolute;
+    top: 0;
+    right: 28px;
+
+    padding: 8px 14px;
+
+    background: linear-gradient(180deg,
+            #e9a45f,
+            #f7d52d,
+            #fff200);
+
+    color: #211915;
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    border-radius: 0 0 7px 7px;
+}
+
+
+/* TOP */
+
+.plan-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plan-number {
+    color: #bd7548;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.plan-duration {
+    color: #9a8d84;
+    font-size: 10px;
+}
+
+
+/* TITLE */
+
+.plan-card h2 {
+    margin: 45px 0 5px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 39px;
+    line-height: 1;
+}
+
+.plan-subtitle {
+    color: #756b64;
+    font-size: 11px;
+}
+
+
+/* PRICE */
+
+.plan-price {
+    margin-top: 30px;
+}
+
+.plan-price small {
+    display: block;
+    margin-bottom: 3px;
+
+    color: #9a8d84;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.plan-price strong {
+    color: #bd7548;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 42px;
+}
+
+
+/* LINE */
+
+.plan-line {
+    width: 100%;
+    height: 1px;
+    margin: 22px 0;
+    background: #eaded2;
+}
+
+
+/* FEATURES */
+
+.plan-card ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.plan-card li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 14px;
+
+    color: #514740;
+    font-size: 11px;
+}
+
+.plan-card li span {
+    color: #bd7548;
+    font-weight: 700;
+}
+
+
+/* BUTTON */
+
+.plan-card button {
+    width: 100%;
+    height: 48px;
+    margin-top: auto;
+
+    border: none;
+    border-radius: 7px;
+
+    background: linear-gradient(180deg,
+            #e9a45f 0%,
+            #f7d52d 48%,
+            #fff200 100%);
+
+    color: #211915;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(210, 160, 40, .18);
+
+    transition: .25s ease;
+}
+
+.plan-card button span {
+    margin-left: 18px;
+}
+
+.plan-card button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(210, 160, 40, .28);
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 950px) {
+
+    .plans-grid {
+        grid-template-columns: 1fr;
+        max-width: 550px;
+        margin: auto;
+    }
+
+    .plan-card {
+        min-height: 480px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .plans-hero {
+        padding: 70px 20px 50px;
+    }
+
+    .plans-section {
+        padding: 0 18px 70px;
+    }
+
+    .plan-card {
+        padding: 25px;
+    }
+
+    .plan-card h2 {
+        font-size: 34px;
+    }
+}

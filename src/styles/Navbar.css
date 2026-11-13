@@ -1,0 +1,341 @@
+ @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap");
+
+
+.navbar {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 20;
+
+    height: 88px;
+
+    padding:
+        0 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background:
+        rgba(247, 240, 231, 0.94);
+
+    border-bottom:
+        1px solid rgba(84, 61, 45, 0.10);
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    box-sizing: border-box;
+}
+
+
+/* LOGO */
+
+.navbar-logo {
+    text-decoration: none;
+
+    display: flex;
+
+    align-items: center;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 37px;
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    letter-spacing: -2px;
+
+    color: #241914;
+}
+
+
+.logo-main {
+    color: #241914;
+}
+
+
+.logo-go {
+    color: #c98638;
+}
+
+
+.logo-plane {
+    margin-left: 4px;
+
+    margin-top: -19px;
+
+    font-size: 14px;
+
+    color: #241914;
+}
+
+
+/* LINKS */
+
+.navbar-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 42px;
+
+    margin-left: auto;
+
+    margin-right: 75px;
+}
+
+
+.navbar-links a {
+    position: relative;
+
+    text-decoration: none;
+
+    color: #4f443d;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    transition:
+        color 0.25s ease;
+}
+
+
+.navbar-links a:hover {
+    color: #bd7548;
+}
+
+
+.navbar-links a.active {
+    color: #bd7548;
+}
+
+
+.navbar-links a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: -10px;
+
+    width: 18px;
+
+    height: 2px;
+
+    margin: auto;
+
+    background: #bd7548;
+
+    border-radius: 10px;
+}
+
+
+/* RIGHT */
+
+.navbar-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.navbar-icon {
+    width: 39px;
+    height: 39px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        #efe3d4;
+
+    color: #2b211c;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.navbar-icon:hover {
+    transform: translateY(-2px);
+
+    background:
+        #e8d6c0;
+}
+
+
+/* BOOK NOW */
+
+.navbar-book {
+    height: 46px;
+
+    min-width: 145px;
+
+    margin-left: 6px;
+
+    padding: 0 20px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-decoration: none;
+
+    background:
+        linear-gradient(180deg,
+            #e7a15b 0%,
+            #f6d42d 55%,
+            #fff000 100%);
+
+    color: #1e1813;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 9px 20px rgba(194, 143, 43, 0.18);
+}
+
+
+/* MENU */
+
+.navbar-menu {
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    color: #241914;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+/* TABLET */
+
+@media (max-width: 1050px) {
+
+    .navbar {
+        padding: 0 40px;
+    }
+
+    .navbar-links {
+        gap: 25px;
+
+        margin-right: 30px;
+    }
+
+    .navbar-book {
+        min-width: 120px;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        height: 74px;
+
+        padding: 0 22px;
+    }
+
+    .navbar-logo {
+        font-size: 30px;
+    }
+
+    .navbar-links {
+        position: absolute;
+
+        top: 74px;
+
+        left: 15px;
+        right: 15px;
+
+        margin: 0;
+
+        padding: 20px;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+
+        border-radius: 14px;
+
+        background:
+            #fffaf4;
+
+        box-shadow:
+            0 15px 35px rgba(48, 34, 24, 0.14);
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .navbar-right {
+        gap: 6px;
+    }
+
+    .navbar-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .navbar-book {
+        display: none;
+    }
+
+    .navbar-menu {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+    }
+}
+

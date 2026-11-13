@@ -1,0 +1,149 @@
+.creative-video-text {
+    width: 100%;
+    min-height: 620px;
+
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding:
+        40px 20px 60px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+.creative-content {
+    width: 100%;
+    max-width: 1550px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.creative-title-wrapper {
+    width: 100%;
+    height: 470px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.creative-video-canvas {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    position: relative;
+    z-index: 2;
+}
+
+.creative-hidden-video {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+}
+
+.creative-subtitle {
+    width: 100%;
+
+    margin-top: -18px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+
+    position: relative;
+}
+
+.creative-subtitle p {
+    margin: 0;
+
+    color: #5e564f;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 18px;
+
+    font-style: italic;
+
+    letter-spacing: .4px;
+
+    white-space: nowrap;
+}
+
+.subtitle-line {
+    width: 55px;
+    height: 1px;
+
+    background: #b8894a;
+
+    opacity: .75;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .creative-title-wrapper {
+        height: 350px;
+    }
+
+    .creative-subtitle p {
+        font-size: 16px;
+    }
+
+    .subtitle-line {
+        width: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .creative-video-text {
+        min-height: 380px;
+
+        padding:
+            25px 8px 40px;
+    }
+
+    .creative-title-wrapper {
+        height: 250px;
+    }
+
+    .creative-subtitle {
+        gap: 10px;
+    }
+
+    .creative-subtitle p {
+        font-size: 13px;
+    }
+
+    .subtitle-line {
+        width: 25px;
+    }
+}

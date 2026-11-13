@@ -1,0 +1,573 @@
+/* =========================================================
+   FEATURED DESTINATION — WHITE VERSION
+========================================================= */
+
+.featured-destination {
+    width: 100%;
+
+    padding: 110px 7%;
+
+    box-sizing: border-box;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.05fr) minmax(0, 0.95fr);
+
+    align-items: center;
+
+    gap: 80px;
+
+    background: #ffffff;
+
+    color: #211915;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.featured-image {
+    position: relative;
+
+    width: 100%;
+    height: 540px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 25px 60px rgba(35, 22, 15, 0.14);
+}
+
+
+.featured-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.8s ease;
+}
+
+
+.featured-image:hover img {
+    transform:
+        scale(1.05);
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.featured-image-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(to top,
+            rgba(20, 12, 8, 0.65),
+            transparent 45%);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.featured-number {
+    position: absolute;
+
+    top: 25px;
+    left: 25px;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    font-weight: 600;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   LOCATION
+========================================================= */
+
+.featured-location {
+    position: absolute;
+
+    bottom: 25px;
+    left: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    z-index: 2;
+}
+
+
+.featured-location span {
+    color: #e0a06d;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.featured-content {
+    max-width: 570px;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.featured-label {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #bd7548;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.featured-content h2 {
+    margin: 0;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(55px,
+            6vw,
+            82px);
+
+    font-weight: 500;
+
+    line-height: 0.9;
+
+    letter-spacing: -2px;
+
+    color: #211915;
+}
+
+
+.featured-content h2 span {
+    color: #bd7548;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.featured-description {
+    max-width: 500px;
+
+    margin:
+        28px 0 30px;
+
+    color: #756b64;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   INFO
+========================================================= */
+
+.featured-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 0;
+
+    margin-bottom: 28px;
+}
+
+
+.featured-info-item {
+    min-width: 105px;
+
+    padding-right: 25px;
+
+    margin-right: 25px;
+
+    border-right:
+        1px solid rgba(33, 25, 21, 0.18);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.featured-info-item:last-child {
+    border-right: none;
+
+    margin-right: 0;
+
+    padding-right: 0;
+}
+
+
+.featured-info-item strong {
+    color: #211915;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 27px;
+
+    font-weight: 600;
+}
+
+
+.featured-info-item span {
+    color: #8a8078;
+
+    font-size: 9px;
+
+    letter-spacing: 1.2px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.featured-price {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 8px;
+
+    margin-bottom: 25px;
+}
+
+
+.featured-price span {
+    color: #8a8078;
+
+    font-size: 11px;
+}
+
+
+.featured-price strong {
+    color: #bd7548;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 29px;
+
+    font-weight: 600;
+}
+
+
+.featured-price small {
+    color: #8a8078;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.featured-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+/* =========================================================
+   MAIN BUTTON
+========================================================= */
+
+.featured-button {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    min-width: 170px;
+
+    height: 48px;
+
+    padding: 0 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: #bd7548;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.featured-button span {
+    font-size: 18px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.featured-button:hover {
+    background: #9e5c38;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(189, 117, 72, 0.25);
+}
+
+
+.featured-button:hover span {
+    transform:
+        translateX(4px);
+}
+
+
+/* =========================================================
+   OUTLINE BUTTON
+========================================================= */
+
+.featured-outline-button {
+    height: 48px;
+
+    padding: 0 20px;
+
+    border:
+        1px solid rgba(33, 25, 21, 0.25);
+
+    border-radius: 5px;
+
+    background: transparent;
+
+    color: #211915;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        border 0.3s ease,
+        color 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.featured-outline-button:hover {
+    border-color: #bd7548;
+
+    color: #bd7548;
+
+    background:
+        rgba(189, 117, 72, 0.04);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .featured-destination {
+        padding:
+            90px 5%;
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+
+    .featured-content {
+        max-width: 700px;
+    }
+
+
+    .featured-image {
+        height: 450px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .featured-destination {
+        padding:
+            75px 20px;
+
+        gap: 35px;
+    }
+
+
+    .featured-image {
+        height: 360px;
+
+        border-radius: 8px;
+    }
+
+
+    .featured-content h2 {
+        font-size: 58px;
+
+        letter-spacing: -1.5px;
+    }
+
+
+    .featured-description {
+        margin-top: 22px;
+
+        font-size: 13px;
+
+        line-height: 1.8;
+    }
+
+
+    .featured-info {
+        flex-wrap: wrap;
+
+        gap: 20px;
+    }
+
+
+    .featured-info-item {
+        margin-right: 0;
+
+        padding-right: 18px;
+    }
+
+
+    .featured-price {
+        margin-top: 5px;
+    }
+
+
+    .featured-actions {
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .featured-button,
+    .featured-outline-button {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .featured-destination {
+        padding:
+            65px 16px;
+    }
+
+
+    .featured-image {
+        height: 320px;
+    }
+
+
+    .featured-content h2 {
+        font-size: 50px;
+    }
+
+
+    .featured-info-item strong {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,377 @@
+.featured-destination {
+    width: 100%;
+
+    padding: 110px 7%;
+
+    box-sizing: border-box;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.05fr) minmax(0, .95fr);
+
+    align-items: center;
+
+    gap: 80px;
+
+    background: #f4eee6;
+
+    color: #211915;
+}
+
+
+/* IMAGE */
+
+.featured-image {
+    position: relative;
+
+    width: 100%;
+
+    height: 540px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 25px 60px rgba(35, 22, 15, .18);
+}
+
+.featured-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform .8s ease;
+}
+
+.featured-image:hover img {
+    transform:
+        scale(1.05);
+}
+
+.featured-image-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(to top,
+            rgba(20, 12, 8, .65),
+            transparent 45%);
+}
+
+.featured-number {
+    position: absolute;
+
+    top: 25px;
+    left: 25px;
+
+    color: #fff;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    font-weight: 600;
+}
+
+.featured-location {
+    position: absolute;
+
+    bottom: 25px;
+    left: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #fff;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+.featured-location span {
+    color: #e0a06d;
+}
+
+
+/* CONTENT */
+
+.featured-content {
+    max-width: 570px;
+}
+
+.featured-label {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #bd7548;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+.featured-content h2 {
+    margin: 0;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(55px,
+            6vw,
+            82px);
+
+    font-weight: 500;
+
+    line-height: .9;
+
+    letter-spacing: -2px;
+}
+
+.featured-content h2 span {
+    color: #bd7548;
+
+    font-style: italic;
+}
+
+.featured-description {
+    max-width: 500px;
+
+    margin:
+        28px 0 30px;
+
+    color: #756b64;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+}
+
+
+/* INFO */
+
+.featured-info {
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 28px;
+}
+
+.featured-info-item {
+    min-width: 105px;
+
+    padding-right: 25px;
+
+    margin-right: 25px;
+
+    border-right:
+        1px solid rgba(33, 25, 21, .18);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.featured-info-item:last-child {
+    border-right: none;
+}
+
+.featured-info-item strong {
+    color: #211915;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 27px;
+
+    font-weight: 600;
+}
+
+.featured-info-item span {
+    color: #8a8078;
+
+    font-size: 9px;
+
+    letter-spacing: 1.2px;
+
+    text-transform: uppercase;
+}
+
+
+/* PRICE */
+
+.featured-price {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 8px;
+
+    margin-bottom: 25px;
+}
+
+.featured-price span,
+.featured-price small {
+    color: #8a8078;
+
+    font-size: 10px;
+}
+
+.featured-price strong {
+    color: #bd7548;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 29px;
+}
+
+
+/* BUTTON */
+
+.featured-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+.featured-button {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    min-width: 170px;
+
+    height: 48px;
+
+    padding: 0 20px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    background: #bd7548;
+
+    color: #fff;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: .5px;
+
+    cursor: pointer;
+
+    transition: .3s ease;
+}
+
+.featured-button span {
+    font-size: 18px;
+}
+
+.featured-button:hover {
+    background: #9e5c38;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(189, 117, 72, .25);
+}
+
+
+/* TABLET */
+
+@media (max-width: 950px) {
+
+    .featured-destination {
+        padding: 90px 5%;
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .featured-content {
+        max-width: 700px;
+    }
+
+    .featured-image {
+        height: 450px;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .featured-destination {
+        padding: 75px 20px;
+
+        gap: 35px;
+    }
+
+    .featured-image {
+        height: 360px;
+
+        border-radius: 8px;
+    }
+
+    .featured-content h2 {
+        font-size: 58px;
+    }
+
+    .featured-description {
+        margin-top: 22px;
+
+        font-size: 13px;
+    }
+
+    .featured-info {
+        flex-wrap: wrap;
+
+        gap: 20px;
+    }
+
+    .featured-info-item {
+        margin-right: 0;
+
+        padding-right: 18px;
+    }
+
+    .featured-actions {
+        width: 100%;
+    }
+
+    .featured-button {
+        width: 100%;
+    }
+}

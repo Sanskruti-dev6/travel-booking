@@ -1,0 +1,147 @@
+.destination-card {
+    width: 100%;
+    padding: 100px 7%;
+    box-sizing: border-box;
+    background: #ffffff;
+}
+
+.destinations-header {
+    max-width: 760px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.destinations-header span {
+    color: #bd7548;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.destinations-header h2 {
+    margin: 14px 0;
+    color: #211915;
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+    font-size: clamp(52px, 6vw, 80px);
+    font-weight: 500;
+}
+
+.destinations-header em {
+    color: #bd7548;
+    font-style: italic;
+}
+
+.destinations-header p {
+    margin: 0;
+    color: #756b64;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.destinations-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+.destination-card {
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #ebe1d8;
+    border-radius: 12px;
+
+    box-shadow:
+        0 15px 40px rgba(35, 22, 15, 0.06);
+}
+
+.destination-placeholder {
+    height: 220px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(135deg,
+            #e3a66a,
+            #f4eee6);
+
+    color: #211915;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.destination-card h3 {
+    margin: 20px 0 8px;
+
+    color: #211915;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 32px;
+}
+
+.destination-card p {
+    margin: 0 0 18px;
+
+    color: #756b64;
+
+    font-size: 12px;
+}
+
+.destination-card button {
+    height: 42px;
+    padding: 0 18px;
+
+    border: none;
+    border-radius: 23px;
+
+    background:
+        linear-gradient(184deg,
+            #e3a66a,
+            #fcf602);
+
+    color: #18120f;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .destinations-section {
+        padding: 75px 20px;
+    }
+
+    .destinations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .destination-placeholder {
+        height: 190px;
+    }
+}
